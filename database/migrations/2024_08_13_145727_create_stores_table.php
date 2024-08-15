@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('stores', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('slug');
+            $table->string('thumbnail');
+            $table->text('address');
+            $table->boolean('is_open');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
