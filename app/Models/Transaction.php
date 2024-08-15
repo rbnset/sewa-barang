@@ -35,7 +35,7 @@ class Transaction extends Model
 
     public static function generateUniqueTrxId()
     {
-        $prefix = 'SEWARD';
+        $prefix = 'RENTALRD';
         do {
             $randomString = $prefix . mt_rand(1000, 9990);
         } while (self::where('trx_id', $randomString)->exists());

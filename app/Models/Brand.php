@@ -23,13 +23,13 @@ class Brand extends Model
         $this->attributes['name'] = $value;
         $this->attributes['slug'] = Str::slug($value);
     }
-    
-    public function brandCategries(): HasMany
+
+    public function brandCategories(): HasMany
     {
         return $this->hasMany(BrandCategory::class, 'brand_id');
     }
 
-    
+
     public function product(): HasMany
     {
         return $this->hasMany(Product::class, 'brand_id');
