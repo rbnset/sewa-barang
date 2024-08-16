@@ -65,7 +65,7 @@ class StoreResource extends Resource
                 IconColumn::make('is_open')
                 ->boolean()
                 ->trueColor('success')
-                ->falseColor('denger')
+                ->falseColor('danger')
                 ->trueIcon('heroicon-o-check-circle')
                 ->falseIcon('heroicon-o-x-circle')
                 ->label('Buka?'),

@@ -23,6 +23,7 @@ return new class extends Migration
             $table->boolean('is_paid');
             $table->string('proof');
             $table->date('started_at');
+            $table->unsignedBigInteger('duration');
             $table->date('ended_at');
             $table->enum('delivery_type', ['pickup', 'home_delivery'])->default('pickup');
             $table->softDeletes();

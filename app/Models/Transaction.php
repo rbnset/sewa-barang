@@ -14,11 +14,12 @@ class Transaction extends Model
 
     protected $fillable = [
         'product_id',
-        'sotre_id',
+        'store_id',
         'name',
         'trx_id',
         'phone_number',
         'address',
+        'duration',
         'total_amount',
         'is_paid',
         'proof',
@@ -45,11 +46,11 @@ class Transaction extends Model
 
     public function product(): BelongsTo
     {
-        return $this->belongsTo(Product::class, 'transaction_id');
+        return $this->belongsTo(Product::class, 'product_id');
     }
 
     public function store(): BelongsTo
     {
-        return $this->belongsTo(Store::class, 'transaction_id');
+        return $this->belongsTo(Store::class, 'store_id');
     }
 }
